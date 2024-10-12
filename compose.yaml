@@ -1,0 +1,12 @@
+services:
+
+  api:
+    container_name: api-for-devops
+    image: api-for-devops
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app
+    ports:
+      - 8080:8080
